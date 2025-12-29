@@ -7,9 +7,9 @@
     <meta name="description" content="潜在意識を書き換え、理想の自分へ。RaDianCe HypNoLabの公式予約サイト。">
     <meta property="og:title" content="RaDianCe HypNoLab">
     <meta property="og:description" content="自分革命のアプデ。潜在意識の書き換えセッション。">
-    <meta property="og:image" content="Gemini_Generated_Image_5sn4e5sn4e5sn4e5.jpg">
+    <meta property="og:image" content="poster.jpg">
     <style>
-        /* --- デザイン定義 (Cyber Spiritual) --- */
+        /* --- Cyber Spiritual Theme --- */
         :root {
             --bg-dark: #0a0a0c;
             --text-main: #ffffff;
@@ -34,11 +34,10 @@
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         img { max-width: 100%; height: auto; display: block; }
         
-        /* --- アニメーション --- */
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes pulseGlow { 0% { box-shadow: 0 0 5px var(--neon-pink); } 50% { box-shadow: 0 0 20px var(--neon-pink), 0 0 10px var(--neon-blue); } 100% { box-shadow: 0 0 5px var(--neon-pink); } }
 
-        /* --- ヘッダー --- */
+        /* Header */
         header {
             position: fixed;
             top: 0; width: 100%;
@@ -70,10 +69,10 @@
             box-shadow: 0 0 10px rgba(255, 42, 109, 0.4);
         }
 
-        /* --- ヒーローセクション (動画背景) --- */
+        /* Hero (Video) */
         .hero {
             position: relative;
-            height: 90vh; /* スマホ画面いっぱいに */
+            height: 90vh;
             width: 100%;
             display: flex;
             align-items: center;
@@ -110,14 +109,13 @@
             font-weight: bold;
         }
 
-        /* --- コンテナ共通 --- */
+        /* Content Container */
         .container {
-            max-width: 600px; /* スマホで見やすい幅 */
+            max-width: 600px;
             margin: 0 auto;
-            padding: 40px 20px 120px; /* フッターボタン用の余白 */
+            padding: 40px 20px 120px;
         }
 
-        /* --- セクションタイトル --- */
         .section-title {
             text-align: center;
             font-size: 1.8rem;
@@ -136,7 +134,6 @@
             margin: 10px auto 0;
         }
 
-        /* --- 画像カードスタイル --- */
         .concept-card {
             background: var(--glass);
             border: 1px solid var(--glass-border);
@@ -152,7 +149,7 @@
             color: #ddd;
         }
 
-        /* --- メニューリスト --- */
+        /* Menu */
         .menu-grid {
             display: flex;
             flex-direction: column;
@@ -183,7 +180,7 @@
         .menu-price { font-size: 1.3rem; color: var(--neon-pink); font-weight: 800; font-family: 'Courier New', monospace; }
         .menu-desc { font-size: 0.9rem; color: var(--text-sub); margin-top: 10px; }
         
-        /* キャラクター装飾 */
+        /* Characters */
         .char-deco {
             display: flex;
             justify-content: center;
@@ -202,7 +199,6 @@
             background: #000;
             z-index: 2;
         }
-        /* 吹き出し風装飾 */
         .char-msg {
             background: #fff;
             color: #000;
@@ -211,14 +207,13 @@
             font-size: 0.8rem;
             font-weight: bold;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 10px; right: 10px;
             z-index: 3;
             box-shadow: 0 5px 10px rgba(0,0,0,0.3);
             transform: rotate(5deg);
         }
 
-        /* --- Instagram & 予約 --- */
+        /* Access */
         .access-box {
             text-align: center;
             background: linear-gradient(180deg, rgba(20,20,20,0), rgba(5, 217, 232, 0.1));
@@ -245,7 +240,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
-        /* --- 固定フローティングボタン --- */
+        /* Floating Button */
         .fixed-cta {
             position: fixed;
             bottom: 25px;
@@ -279,8 +274,8 @@
     </header>
 
     <section class="hero">
-        <video autoplay muted loop playsinline poster="Gemini_Generated_Image_5sn4e5sn4e5sn4e5.jpg">
-            <source src="RaDianCe HypNoLab動画.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline poster="poster.jpg">
+            <source src="movie.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
             <h1>自分革命の<br>アプデ</h1>
@@ -292,17 +287,15 @@
         
         <section>
             <h2 class="section-title">CONCEPT</h2>
-            
             <div class="concept-card">
-                <img src="Gemini_Generated_Image_xpcy6pxpcy6pxpcy.jpg" alt="意識とエネルギーの統合回路図">
+                <img src="diagram.jpg" alt="統合回路図">
                 <div class="concept-text">
                     <strong>意識とエネルギーの統合回路図</strong><br>
                     顕在意識は氷山の一角。深い「普遍的潜在意識」へアクセスし、チャクラのエネルギーポンプを活性化させます。
                 </div>
             </div>
-
             <div class="concept-card">
-                <img src="2.jpg" alt="マンガ解説">
+                <img src="manga.jpg" alt="マンガ解説">
                 <div class="concept-text">
                     <strong>マンガでわかる「覚醒」</strong><br>
                     脳波をシータ波に落とすことで、普段は閉じている「潜在意識のドア」が開きます。これが自分革命のメカニズムです。
@@ -315,7 +308,7 @@
 
             <div class="char-deco">
                 <div class="char-msg">マジで変わるよ！</div>
-                <img src="Gemini_Generated_ギャル.jpg" alt="Staff Character" class="char-img">
+                <img src="char_black.jpg" alt="Staff Character">
             </div>
 
             <div class="menu-grid">
@@ -341,7 +334,7 @@
 
                 <div class="char-deco" style="margin-top: 20px;">
                     <div class="char-msg" style="right: auto; left: 10px; transform: rotate(-5deg); background: var(--neon-blue); color: #000;">自信ついた！</div>
-                    <img src="Athletic_Outfit_Swap (1).jpg" alt="Staff Character" class="char-img" style="border-color: var(--neon-blue); box-shadow: 0 0 15px rgba(5, 217, 232, 0.5);">
+                    <img src="char_white.jpg" alt="Staff Character" class="char-img" style="border-color: var(--neon-blue); box-shadow: 0 0 15px rgba(5, 217, 232, 0.5);">
                 </div>
 
                 <div class="menu-item" style="background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(0,0,0,0)); border-color: gold;">
@@ -359,24 +352,16 @@
         <section class="access-box">
             <h2 class="section-title" style="margin-top:0;">RESERVATION</h2>
             <p>ご予約はInstagramのDMから<br>「予約希望」と送ってください</p>
-            
             <div class="qr-wrapper">
-                <img src="1766221650594.png" alt="Instagram QR Code">
+                <img src="qrcode.png" alt="QR Code">
             </div>
-
             <p style="font-weight:bold; font-size:1.2rem; margin:10px 0;">@RADIANCE_HYPNOLAB</p>
-            
-            <a href="https://www.instagram.com/radiance_hypnolab/" class="insta-btn">
-                Instagramを開く
-            </a>
+            <a href="https://www.instagram.com/radiance_hypnolab/" class="insta-btn">Instagramを開く</a>
         </section>
-
     </div>
 
     <div class="fixed-cta">
-        <a href="https://www.instagram.com/radiance_hypnolab/" class="cta-btn">
-            今すぐ予約する (Instagram)
-        </a>
+        <a href="https://www.instagram.com/radiance_hypnolab/" class="cta-btn">今すぐ予約する (Instagram)</a>
     </div>
 
 </body>
