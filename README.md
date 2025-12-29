@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaDianCe HypNoLab | 自分革命のアプデ</title>
+    <meta name="description" content="潜在意識を書き換え、理想の自分へ。RaDianCe HypNoLabの公式予約サイト。">
+    <meta property="og:title" content="RaDianCe HypNoLab">
+    <meta property="og:description" content="自分革命のアプデ。潜在意識の書き換えセッション。">
+    <meta property="og:image" content="Gemini_Generated_Image_5sn4e5sn4e5sn4e5.jpg">
+    <style>
+        /* --- デザイン定義 (Cyber Spiritual) --- */
+        :root {
+            --bg-dark: #0a0a0c;
+            --text-main: #ffffff;
+            --text-sub: #b0b0b0;
+            --neon-pink: #ff2a6d;
+            --neon-blue: #05d9e8;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        img { max-width: 100%; height: auto; display: block; }
+        
+        /* --- アニメーション --- */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulseGlow { 0% { box-shadow: 0 0 5px var(--neon-pink); } 50% { box-shadow: 0 0 20px var(--neon-pink), 0 0 10px var(--neon-blue); } 100% { box-shadow: 0 0 5px var(--neon-pink); } }
+
+        /* --- ヘッダー --- */
+        header {
+            position: fixed;
+            top: 0; width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(10, 10, 12, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-sizing: border-box;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--neon-blue), #fff, var(--neon-pink));
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+        }
+        .header-btn {
+            background: var(--neon-pink);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(255, 42, 109, 0.4);
+        }
+
+        /* --- ヒーローセクション (動画背景) --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* スマホ画面いっぱいに */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero video {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%; min-height: 100%;
+            width: auto; height: auto;
+            z-index: -1;
+            filter: brightness(0.6);
+            object-fit: cover;
+        }
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            line-height: 1.1;
+            text-shadow: 0 0 20px rgba(5, 217, 232, 0.6);
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: var(--neon-blue);
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        /* --- コンテナ共通 --- */
+        .container {
+            max-width: 600px; /* スマホで見やすい幅 */
+            margin: 0 auto;
+            padding: 40px 20px 120px; /* フッターボタン用の余白 */
+        }
+
+        /* --- セクションタイトル --- */
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 60px 0 40px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+            margin: 10px auto 0;
+        }
+
+        /* --- 画像カードスタイル --- */
+        .concept-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .concept-text {
+            margin-top: 15px;
+            text-align: left;
+            font-size: 0.95rem;
+            color: #ddd;
+        }
+
+        /* --- メニューリスト --- */
+        .menu-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .menu-item {
+            position: relative;
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 25px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .menu-item:hover { transform: translateY(-3px); border-color: var(--neon-blue); }
+        
+        .menu-badge {
+            position: absolute;
+            top: 15px; right: 15px;
+            font-size: 0.8rem;
+            background: #333;
+            padding: 3px 10px;
+            border-radius: 10px;
+            color: var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+        }
+        .menu-name { font-size: 1.4rem; font-weight: bold; margin-bottom: 5px; }
+        .menu-price { font-size: 1.3rem; color: var(--neon-pink); font-weight: 800; font-family: 'Courier New', monospace; }
+        .menu-desc { font-size: 0.9rem; color: var(--text-sub); margin-top: 10px; }
+        
+        /* キャラクター装飾 */
+        .char-deco {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -20px 0 20px;
+            position: relative;
+        }
+        .char-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 3px solid var(--neon-pink);
+            box-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
+            background: #000;
+            z-index: 2;
+        }
+        /* 吹き出し風装飾 */
+        .char-msg {
+            background: #fff;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 3;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            transform: rotate(5deg);
+        }
+
+        /* --- Instagram & 予約 --- */
+        .access-box {
+            text-align: center;
+            background: linear-gradient(180deg, rgba(20,20,20,0), rgba(5, 217, 232, 0.1));
+            border-radius: 30px;
+            padding: 40px 20px;
+            margin-top: 50px;
+            border: 1px solid var(--glass-border);
+        }
+        .qr-wrapper {
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: white;
+            border-radius: 15px;
+        }
+        .insta-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a3ab9);
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        /* --- 固定フローティングボタン --- */
+        .fixed-cta {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 450px;
+            z-index: 999;
+        }
+        .cta-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 18px 0;
+            background: var(--neon-pink);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 800;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(255, 42, 109, 0.6);
+            animation: pulseGlow 3s infinite;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">RaDianCe</div>
+        <a href="https://www.instagram.com/radiance_hypnolab/" class="header-btn">DM予約</a>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline poster="Gemini_Generated_Image_5sn4e5sn4e5sn4e5.jpg">
+            <source src="RaDianCe HypNoLab動画.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>自分革命の<br>アプデ</h1>
+            <p>HypNoLab</p>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <section>
+            <h2 class="section-title">CONCEPT</h2>
+            
+            <div class="concept-card">
+                <img src="Gemini_Generated_Image_xpcy6pxpcy6pxpcy.jpg" alt="意識とエネルギーの統合回路図">
+                <div class="concept-text">
+                    <strong>意識とエネルギーの統合回路図</strong><br>
+                    顕在意識は氷山の一角。深い「普遍的潜在意識」へアクセスし、チャクラのエネルギーポンプを活性化させます。
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <img src="2.jpg" alt="マンガ解説">
+                <div class="concept-text">
+                    <strong>マンガでわかる「覚醒」</strong><br>
+                    脳波をシータ波に落とすことで、普段は閉じている「潜在意識のドア」が開きます。これが自分革命のメカニズムです。
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">MENU LIST</h2>
+
+            <div class="char-deco">
+                <div class="char-msg">マジで変わるよ！</div>
+                <img src="Gemini_Generated_ギャル.jpg" alt="Staff Character" class="char-img">
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="menu-badge">お試し</span>
+                    <div class="menu-name">Chill & Relax Plan</div>
+                    <div class="menu-price">¥5,000 <span style="font-size:0.8rem; color:#fff;">(30min)</span></div>
+                    <div class="menu-desc">
+                        不安解消＆極上リラックス。<br>
+                        明日への活力をチャージしたいあなたへ。
+                    </div>
+                </div>
+
+                <div class="menu-item" style="border-color: var(--neon-pink);">
+                    <span class="menu-badge" style="color:var(--neon-pink); border-color:var(--neon-pink);">人気No.1</span>
+                    <div class="menu-name">Glow Up Session</div>
+                    <div class="menu-price">¥15,000 <span style="font-size:0.8rem; color:#fff;">(60min)</span></div>
+                    <div class="menu-desc">
+                        【本格アプデ】推し体験、苦手克服、ダイエット設定など。<br>
+                        あなたのためのオーダーメイドセッション。
+                    </div>
+                </div>
+
+                <div class="char-deco" style="margin-top: 20px;">
+                    <div class="char-msg" style="right: auto; left: 10px; transform: rotate(-5deg); background: var(--neon-blue); color: #000;">自信ついた！</div>
+                    <img src="Athletic_Outfit_Swap (1).jpg" alt="Staff Character" class="char-img" style="border-color: var(--neon-blue); box-shadow: 0 0 15px rgba(5, 217, 232, 0.5);">
+                </div>
+
+                <div class="menu-item" style="background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(0,0,0,0)); border-color: gold;">
+                    <span class="menu-badge" style="color: gold; border-color: gold;">完全変身</span>
+                    <div class="menu-name">Perfect Makeover</div>
+                    <div class="menu-price" style="color: gold;">¥50,000 <span style="font-size:0.8rem; color:#fff;">(3回セット)</span></div>
+                    <div class="menu-desc">
+                        理想の自分を完全定着。<br>
+                        一生モノの揺るがない自信を手に入れる。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="access-box">
+            <h2 class="section-title" style="margin-top:0;">RESERVATION</h2>
+            <p>ご予約はInstagramのDMから<br>「予約希望」と送ってください</p>
+            
+            <div class="qr-wrapper">
+                <img src="1766221650594.png" alt="Instagram QR Code">
+            </div>
+
+            <p style="font-weight:bold; font-size:1.2rem; margin:10px 0;">@RADIANCE_HYPNOLAB</p>
+            
+            <a href="https://www.instagram.com/radiance_hypnolab/" class="insta-btn">
+                Instagramを開く
+            </a>
+        </section>
+
+    </div>
+
+    <div class="fixed-cta">
+        <a href="https://www.instagram.com/radiance_hypnolab/" class="cta-btn">
+            今すぐ予約する (Instagram)
+        </a>
+    </div>
+
+</body>
+</html>
