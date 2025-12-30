@@ -3,73 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RaDianCe HypNoLab | 自分革命のアプデ</title>
-    <meta name="description" content="潜在意識を書き換え、理想の自分へ。RaDianCe HypNoLabの公式予約サイト。">
-    <meta property="og:title" content="RaDianCe HypNoLab">
-    <meta property="og:description" content="自分革命のアプデ。潜在意識の書き換えセッション。">
+    <title>RaDianCe HypNoLab | AI超能力者うっちーの自分改革</title>
+    <meta name="description" content="AI超能力者うっちーが贈る、潜在意識書き換えセッション。RaDianCe HypNoLab公式。">
+    
+    <meta property="og:title" content="RaDianCe HypNoLab | 自分革命のアプデ">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="poster.jpg">
+    
     <style>
-        /* --- Cyber Spiritual Theme --- */
+        /* --- CORE VARIABLES (Cyber/Neon/GenZ) --- */
         :root {
-            --bg-dark: #0a0a0c;
-            --text-main: #ffffff;
-            --text-sub: #b0b0b0;
-            --neon-pink: #ff2a6d;
-            --neon-blue: #05d9e8;
-            --glass: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --bg-core: #050505;
+            --text-main: #f0f0f0;
+            --neon-pink: #ff00ff;
+            --neon-cyan: #00ffff;
+            --neon-purple: #bc13fe;
+            --glass-panel: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
         }
 
+        /* --- RESET & BASE --- */
         body {
             margin: 0;
-            padding: 0;
-            background-color: var(--bg-dark);
+            background-color: var(--bg-core);
             color: var(--text-main);
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
+            font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", sans-serif;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            padding-bottom: 100px; /* Space for floating btn */
         }
-
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-        img { max-width: 100%; height: auto; display: block; }
-        
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes pulseGlow { 0% { box-shadow: 0 0 5px var(--neon-pink); } 50% { box-shadow: 0 0 20px var(--neon-pink), 0 0 10px var(--neon-blue); } 100% { box-shadow: 0 0 5px var(--neon-pink); } }
+        img, video { max-width: 100%; display: block; }
+        h1, h2, h3 { margin: 0; line-height: 1.2; }
 
-        /* Header */
+        /* --- UTILS & ANIMATION --- */
+        .neon-text-pink { text-shadow: 0 0 10px var(--neon-pink); color: #fff; }
+        .neon-text-cyan { text-shadow: 0 0 10px var(--neon-cyan); color: #fff; }
+        
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 255, 0.7); } 70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(255, 0, 255, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 255, 0); } }
+
+        /* --- HEADER --- */
         header {
             position: fixed;
-            top: 0; width: 100%;
+            top: 0; left: 0; width: 100%;
+            padding: 15px 20px;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(12px);
+            z-index: 999;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
-            background: rgba(10, 10, 12, 0.9);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
             box-sizing: border-box;
             border-bottom: 1px solid var(--glass-border);
         }
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 800;
-            background: linear-gradient(90deg, var(--neon-blue), #fff, var(--neon-pink));
-            -webkit-background-clip: text;
-            color: transparent;
-            letter-spacing: 1px;
-        }
-        .header-btn {
-            background: var(--neon-pink);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            box-shadow: 0 0 10px rgba(255, 42, 109, 0.4);
-        }
+        .brand { font-weight: 900; font-size: 1.1rem; letter-spacing: 1px; background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink)); -webkit-background-clip: text; color: transparent; }
+        .head-cta { font-size: 0.8rem; padding: 8px 16px; border-radius: 20px; background: var(--glass-panel); border: 1px solid var(--neon-cyan); color: var(--neon-cyan); font-weight: bold; }
 
-        /* Hero (Video) */
+        /* --- HERO SECTION --- */
         .hero {
             position: relative;
             height: 90vh;
@@ -84,284 +75,292 @@
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             min-width: 100%; min-height: 100%;
-            width: auto; height: auto;
-            z-index: -1;
-            filter: brightness(0.6);
             object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.5) contrast(1.1);
         }
-        .hero-content {
+        .hero-overlay {
             text-align: center;
-            z-index: 1;
+            z-index: 10;
             padding: 20px;
-            animation: fadeIn 1.5s ease-out;
         }
-        .hero h1 {
-            font-size: 3rem;
-            margin: 0;
-            line-height: 1.1;
-            text-shadow: 0 0 20px rgba(5, 217, 232, 0.6);
+        .hero-tag {
+            display: inline-block;
+            background: var(--neon-purple);
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px var(--neon-purple);
         }
-        .hero p {
-            font-size: 1.1rem;
-            margin-top: 15px;
-            color: var(--neon-blue);
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+        .hero-sub {
+            font-size: 1rem;
             letter-spacing: 2px;
+            margin-top: 10px;
             font-weight: bold;
         }
 
-        /* Content Container */
+        /* --- CONTAINER --- */
         .container {
             max-width: 600px;
             margin: 0 auto;
-            padding: 40px 20px 120px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.8rem;
-            margin: 60px 0 40px;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-            margin: 10px auto 0;
-        }
-
-        .concept-card {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
             padding: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .concept-text {
-            margin-top: 15px;
-            text-align: left;
-            font-size: 0.95rem;
-            color: #ddd;
         }
 
-        /* Menu */
-        .menu-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
+        /* --- SECTIONS --- */
+        .section-header {
+            text-align: center;
+            margin: 80px 0 40px;
         }
-        .menu-item {
-            position: relative;
-            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 20px;
-            padding: 25px;
-            overflow: hidden;
-            transition: transform 0.3s;
+        .section-header h2 {
+            font-size: 2rem;
+            display: inline-block;
+            border-bottom: 3px solid var(--neon-cyan);
+            padding-bottom: 5px;
+            letter-spacing: 2px;
         }
-        .menu-item:hover { transform: translateY(-3px); border-color: var(--neon-blue); }
+
+        /* --- CONCEPT (Glassmorphism) --- */
+        .card {
+            background: var(--glass-panel);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .card img { border-radius: 12px; margin-bottom: 15px; }
+        .card-title { font-size: 1.2rem; font-weight: bold; color: var(--neon-cyan); margin-bottom: 10px; }
+        .card-text { font-size: 0.95rem; line-height: 1.7; color: #ddd; }
+
+        /* --- MENU & CHARACTERS --- */
+        .menu-list { display: flex; flex-direction: column; gap: 30px; }
         
-        .menu-badge {
-            position: absolute;
-            top: 15px; right: 15px;
-            font-size: 0.8rem;
-            background: #333;
-            padding: 3px 10px;
-            border-radius: 10px;
-            color: var(--neon-blue);
-            border: 1px solid var(--neon-blue);
-        }
-        .menu-name { font-size: 1.4rem; font-weight: bold; margin-bottom: 5px; }
-        .menu-price { font-size: 1.3rem; color: var(--neon-pink); font-weight: 800; font-family: 'Courier New', monospace; }
-        .menu-desc { font-size: 0.9rem; color: var(--text-sub); margin-top: 10px; }
-        
-        /* Characters */
-        .char-deco {
+        /* Character Bubble */
+        .char-wrapper {
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin: -20px 0 20px;
+            justify-content: center;
+            margin-bottom: -20px; /* Overlap */
             position: relative;
+            z-index: 5;
         }
-        .char-img {
-            width: 140px;
-            height: 140px;
+        .char-icon {
+            width: 120px; height: 120px;
             border-radius: 50%;
             object-fit: cover;
             object-position: top;
             border: 3px solid var(--neon-pink);
-            box-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
             background: #000;
-            z-index: 2;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
         }
-        .char-msg {
+        .char-bubble {
+            position: absolute;
             background: #fff;
             color: #000;
-            padding: 5px 15px;
+            padding: 8px 16px;
             border-radius: 20px;
-            font-size: 0.8rem;
             font-weight: bold;
-            position: absolute;
-            top: 10px; right: 10px;
-            z-index: 3;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-            transform: rotate(5deg);
+            font-size: 0.85rem;
+            top: 0;
+            right: 50%;
+            transform: translateX(90%) rotate(-5deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            white-space: nowrap;
         }
 
-        /* Access */
-        .access-box {
+        /* Menu Item */
+        .menu-item {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 24px;
+            padding: 30px 20px 20px;
             text-align: center;
-            background: linear-gradient(180deg, rgba(20,20,20,0), rgba(5, 217, 232, 0.1));
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .menu-item:active { transform: scale(0.98); }
+        .tag-badge {
+            position: absolute;
+            top: 0; left: 0;
+            background: var(--neon-pink);
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 5px 15px;
+            border-bottom-right-radius: 15px;
+            font-weight: bold;
+        }
+        .menu-name { font-size: 1.5rem; font-weight: 800; margin-bottom: 5px; }
+        .menu-price { font-family: "Courier New", monospace; font-size: 1.4rem; color: var(--neon-cyan); font-weight: bold; }
+        .menu-desc { font-size: 0.9rem; color: #bbb; margin-top: 10px; }
+
+        /* --- RESERVATION (QR) --- */
+        .qr-section {
+            text-align: center;
+            background: linear-gradient(180deg, transparent, rgba(0, 255, 255, 0.1));
             border-radius: 30px;
             padding: 40px 20px;
+            border: 1px solid var(--neon-cyan);
             margin-top: 50px;
-            border: 1px solid var(--glass-border);
         }
-        .qr-wrapper {
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            background: white;
-            border-radius: 15px;
+        .qr-img {
+            width: 180px; margin: 20px auto;
+            border: 5px solid #fff; border-radius: 15px;
         }
-        .insta-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a3ab9);
-            color: white;
-            font-weight: bold;
-            border-radius: 50px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-        }
+        .insta-id { font-size: 1.3rem; font-weight: 900; letter-spacing: 1px; display: block; margin: 10px 0; }
 
-        /* Floating Button */
-        .fixed-cta {
+        /* --- FLOATING BUTTON --- */
+        .float-btn-wrapper {
             position: fixed;
-            bottom: 25px;
-            left: 50%;
+            bottom: 25px; left: 50%;
             transform: translateX(-50%);
-            width: 90%;
-            max-width: 450px;
-            z-index: 999;
+            width: 90%; max-width: 400px;
+            z-index: 1000;
         }
-        .cta-btn {
-            display: block;
+        .float-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
-            text-align: center;
-            padding: 18px 0;
-            background: var(--neon-pink);
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 800;
+            height: 60px;
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-purple));
             border-radius: 50px;
-            box-shadow: 0 5px 20px rgba(255, 42, 109, 0.6);
-            animation: pulseGlow 3s infinite;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            font-weight: 900;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(255, 0, 255, 0.5);
+            animation: pulse 2s infinite;
         }
+        .float-btn span { margin-left: 10px; }
+
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">RaDianCe</div>
-        <a href="https://www.instagram.com/radiance_hypnolab/" class="header-btn">DM予約</a>
+        <div class="brand">RaDianCe</div>
+        <a href="https://www.instagram.com/radiance_hypnolab/" class="head-cta">Instagram予約</a>
     </header>
 
     <section class="hero">
         <video autoplay muted loop playsinline poster="poster.jpg">
-            <source src="movie.mp4" type="video/mp4">
+            <source src="hero_movie.mp4" type="video/mp4">
         </video>
-        <div class="hero-content">
-            <h1>自分革命の<br>アプデ</h1>
-            <p>HypNoLab</p>
+        
+        <div class="hero-overlay">
+            <div class="hero-tag">AI超能力者うっちー Presents</div>
+            <h1 class="hero-title neon-text-cyan">SELF<br>REVOLUTION</h1>
+            <p class="hero-sub neon-text-pink">#自分改革のアプデ<br>#HypNoLab</p>
         </div>
     </section>
 
     <div class="container">
-        
+
         <section>
-            <h2 class="section-title">CONCEPT</h2>
-            <div class="concept-card">
+            <div class="section-header">
+                <h2>SYSTEM</h2>
+                <p style="font-size:0.8rem; color:#888;">意識とエネルギーの統合回路</p>
+            </div>
+
+            <div class="card">
                 <img src="diagram.jpg" alt="統合回路図">
-                <div class="concept-text">
-                    <strong>意識とエネルギーの統合回路図</strong><br>
-                    顕在意識は氷山の一角。深い「普遍的潜在意識」へアクセスし、チャクラのエネルギーポンプを活性化させます。
+                <div class="card-title">⚡️ 潜在意識ハック</div>
+                <div class="card-text">
+                    氷山の一角である「顕在意識」じゃなくて、もっと深い「普遍的潜在意識」に直接アクセス。<br>
+                    エネルギーポンプを回して、内側からオーラごと書き換える。
                 </div>
             </div>
-            <div class="concept-card">
+
+            <div class="card">
                 <img src="manga.jpg" alt="マンガ解説">
-                <div class="concept-text">
-                    <strong>マンガでわかる「覚醒」</strong><br>
-                    脳波をシータ波に落とすことで、普段は閉じている「潜在意識のドア」が開きます。これが自分革命のメカニズムです。
+                <div class="card-title">🧠 脳波シータ波へ</div>
+                <div class="card-text">
+                    脳波を落として「潜在意識のドア」を開く。<br>
+                    マンガみたいに、気づいたら「なりたい自分」設定完了。<br>
+                    マジで世界の見え方変わるよ。
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title">MENU LIST</h2>
-
-            <div class="char-deco">
-                <div class="char-msg">マジで変わるよ！</div>
-                <img src="char_black.jpg" alt="Staff Character">
+            <div class="section-header">
+                <h2>MENU</h2>
+                <p style="font-size:0.8rem; color:#888;">Select Your Update</p>
             </div>
 
-            <div class="menu-grid">
+            <div class="char-wrapper">
+                <div class="char-bubble">マジで沼るから覚悟して💖</div>
+                <img src="char_gal.jpg" alt="AI Model Gal" class="char-icon">
+            </div>
+
+            <div class="menu-list">
                 <div class="menu-item">
-                    <span class="menu-badge">お試し</span>
-                    <div class="menu-name">Chill & Relax Plan</div>
-                    <div class="menu-price">¥5,000 <span style="font-size:0.8rem; color:#fff;">(30min)</span></div>
+                    <div class="tag-badge">TRY</div>
+                    <div class="menu-name">Chill & Relax</div>
+                    <div class="menu-price">¥5,000</div>
                     <div class="menu-desc">
-                        不安解消＆極上リラックス。<br>
-                        明日への活力をチャージしたいあなたへ。
+                        【30min】まずはお試し。<br>
+                        不安リセットして、明日への活力を爆チャージ。<br>
+                        #チル #エネルギー調整
                     </div>
+                    <a href="https://www.instagram.com/radiance_hypnolab/" style="display:block; margin-top:15px; color:var(--neon-cyan); font-weight:bold;">👉 予約する</a>
                 </div>
 
-                <div class="menu-item" style="border-color: var(--neon-pink);">
-                    <span class="menu-badge" style="color:var(--neon-pink); border-color:var(--neon-pink);">人気No.1</span>
-                    <div class="menu-name">Glow Up Session</div>
-                    <div class="menu-price">¥15,000 <span style="font-size:0.8rem; color:#fff;">(60min)</span></div>
+                <div class="menu-item" style="border-color:var(--neon-pink);">
+                    <div class="tag-badge" style="background:var(--neon-cyan); color:#000;">POPULAR</div>
+                    <div class="menu-name neon-text-pink">Glow Up Session</div>
+                    <div class="menu-price">¥15,000</div>
                     <div class="menu-desc">
-                        【本格アプデ】推し体験、苦手克服、ダイエット設定など。<br>
-                        あなたのためのオーダーメイドセッション。
+                        【60min】推し体験・苦手克服・ダイエット設定。<br>
+                        自分だけのオーダーメイドで確変起こす。<br>
+                        #垢抜け #自分改革
                     </div>
+                    <a href="https://www.instagram.com/radiance_hypnolab/" style="display:block; margin-top:15px; color:var(--neon-pink); font-weight:bold;">👉 今すぐ予約</a>
                 </div>
 
-                <div class="char-deco" style="margin-top: 20px;">
-                    <div class="char-msg" style="right: auto; left: 10px; transform: rotate(-5deg); background: var(--neon-blue); color: #000;">自信ついた！</div>
-                    <img src="char_white.jpg" alt="Staff Character" class="char-img" style="border-color: var(--neon-blue); box-shadow: 0 0 15px rgba(5, 217, 232, 0.5);">
+                <div class="char-wrapper">
+                    <div class="char-bubble" style="transform: translateX(-90%) rotate(5deg); right: auto; left: 50%;">自信しか勝たん🔥</div>
+                    <img src="char_sporty.jpg" alt="AI Model Sporty" class="char-icon" style="border-color:var(--neon-cyan);">
                 </div>
 
-                <div class="menu-item" style="background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(0,0,0,0)); border-color: gold;">
-                    <span class="menu-badge" style="color: gold; border-color: gold;">完全変身</span>
-                    <div class="menu-name">Perfect Makeover</div>
-                    <div class="menu-price" style="color: gold;">¥50,000 <span style="font-size:0.8rem; color:#fff;">(3回セット)</span></div>
+                <div class="menu-item" style="border-color:gold; background: linear-gradient(135deg, rgba(255,215,0,0.1), transparent);">
+                    <div class="tag-badge" style="background:gold; color:#000;">PREMIUM</div>
+                    <div class="menu-name" style="color:gold;">Perfect Makeover</div>
+                    <div class="menu-price">¥50,000</div>
                     <div class="menu-desc">
-                        理想の自分を完全定着。<br>
-                        一生モノの揺るがない自信を手に入れる。
+                        【3回セット】理想の自分を完全インストール。<br>
+                        一生モノの「揺るがない自信」を手に入れる。<br>
+                        #完全無敵 #人生攻略
                     </div>
+                    <a href="https://www.instagram.com/radiance_hypnolab/" style="display:block; margin-top:15px; color:gold; font-weight:bold;">👉 本気で変わる</a>
                 </div>
             </div>
         </section>
 
-        <section class="access-box">
-            <h2 class="section-title" style="margin-top:0;">RESERVATION</h2>
-            <p>ご予約はInstagramのDMから<br>「予約希望」と送ってください</p>
-            <div class="qr-wrapper">
-                <img src="qrcode.png" alt="QR Code">
-            </div>
-            <p style="font-weight:bold; font-size:1.2rem; margin:10px 0;">@RADIANCE_HYPNOLAB</p>
-            <a href="https://www.instagram.com/radiance_hypnolab/" class="insta-btn">Instagramを開く</a>
+        <section class="qr-section">
+            <h2 style="font-size:1.5rem; margin-bottom:10px;">RESERVATION</h2>
+            <p>ご予約・相談はDMへ<br>「予約希望」と送ってね📩</p>
+            
+            <img src="qr_code.png" alt="Instagram QR" class="qr-img">
+            
+            <a href="https://www.instagram.com/radiance_hypnolab/" class="insta-id">@RADIANCE_HYPNOLAB</a>
+            <p style="font-size:0.8rem; opacity:0.7;">Click ID to Open Instagram</p>
         </section>
+
     </div>
 
-    <div class="fixed-cta">
-        <a href="https://www.instagram.com/radiance_hypnolab/" class="cta-btn">今すぐ予約する (Instagram)</a>
+    <div class="float-btn-wrapper">
+        <a href="https://www.instagram.com/radiance_hypnolab/" class="float-btn">
+            Instagramで予約 🚀
+        </a>
     </div>
 
 </body>
