@@ -11,7 +11,7 @@
     <meta property="og:image" content="poster.jpg">
     
     <style>
-        /* --- CORE VARIABLES (Cyber/Neon/GenZ) --- */
+        /* --- CORE VARIABLES (Cyber/Neon/GenerationZ) --- */
         :root {
             --bg-core: #050505;
             --text-main: #f0f0f0;
@@ -36,7 +36,7 @@
         img, video { max-width: 100%; display: block; }
         h1, h2, h3 { margin: 0; line-height: 1.2; }
 
-        /* --- UTILS & ANIMATION --- */
+        /* --- UTILS&ANIMATION --- */
         .neon-text-pink { text-shadow: 0 0 10px var(--neon-pink); color: #fff; }
         .neon-text-cyan { text-shadow: 0 0 10px var(--neon-cyan); color: #fff; }
         
